@@ -1,13 +1,13 @@
 import Button from "../button/Button";
 import "./Product.css";
 
-export default function Product({ title, description, isNew, img }) {
+export default function Product({ title, description, isNew,img:{desktop}}) {
   return (
     <div>
       <picture>
         {/* <source media="(max-didth:375px)" srcSet={tablet} />
         <source media="(max-width:768px)" srcSet={mobile} /> */}
-        <img src={img} alt={title} width={540} height={560} />
+        <img src={desktop} alt={title} width={540} height={560} />
       </picture>
       <div>
         {isNew && <span>NEW PRODUCT</span>}
