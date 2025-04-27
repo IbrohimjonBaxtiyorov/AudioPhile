@@ -1,13 +1,17 @@
 import Button from "../button/Button";
 import "./Product.css";
-
-export default function Product({ title, description, isNew,img}) {
+function app(){
+  const arr=[
+    
+  ]
+}
+export default function Product({ title, description, isNew, img:{tablet,desktop,mobile} }) {
   return (
-    <div>
+    <div className="">
       <picture>
-        {/* <source media="(max-didth:375px)" srcSet={tablet} />
-        <source media="(max-width:768px)" srcSet={mobile} /> */}
-        <img src={img.desktop} alt={title} width={540} height={560} />
+        <source media="(max-didth:375px)" srcSet={mobile} />
+        <source media="(max-width:768px)" srcSet={tablet} />
+        <img src={desktop} alt={title} width={540} height={560} />
       </picture>
       <div>
         {isNew && <span>NEW PRODUCT</span>}
