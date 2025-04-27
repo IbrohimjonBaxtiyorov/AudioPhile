@@ -10,6 +10,11 @@ import desktopBottom from "../../assets/images/bottom-air-desktop.png";
 import tabletBottom from "../../assets/images/bottom-air-tablet.png";
 import mobileBottom from "../../assets/images/bottom-air-mobile.png";
 import BestAudioGear from "../best-audio-gear/BestAudioGear";
+import OtherPageReference from "../other-page-reference/OtherPageReference";
+import earphoneDesk from '../../assets/images/earphone-desk.png'
+import speakerDesk from '../../assets/images/speaker-desk.png'
+import headphoneDesk from '../../assets/images/headphone-desk.png'
+
 
 export default function Main() {
   const productItems = [
@@ -44,12 +49,32 @@ export default function Main() {
     },
   ];
 
+  const productOther=[
+    {
+      img:headphoneDesk,
+      title:"HEADPHONES"
+    },
+    {
+      img:speakerDesk,
+      title:"SPEAKERS"
+    },
+    {
+      img:earphoneDesk,
+      title:"EARPHONES"
+    }
+  ]
+
   return (
     <main className="main">
       {productItems.map((prduct, index) => {
         return <Product key={index} {...prduct}
         special={index===1} />;
       })}
+      {productOther.map((prod,ind)=>{
+        return <OtherPageReference key={ind} {...prod}/>
+      })
+      }
+      
       <BestAudioGear/>
     </main>
   );

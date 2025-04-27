@@ -8,8 +8,8 @@ export default function BestAudioGear() {
     <section className="container">
       <div className={styles.card}>
         <div>
-          <h2 className={styles.title}>Bringing you the <p>best</p> audio gear</h2>
-          <p>
+          <h2  className={styles.title}>Bringing you the <span className={styles.titlemark}>best</span> audio gear</h2>
+          <p className={styles.desc}>
             Located at the heart of New York City, Audiophile is the premier
             store for high end headphones, earphones, speakers, and audio
             accessories. We have a large showroom and luxury demonstration rooms
