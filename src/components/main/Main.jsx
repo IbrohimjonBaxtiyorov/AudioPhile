@@ -9,6 +9,7 @@ import mobileCenter from "../../assets/images/center-air-mobile.png";
 import desktopBottom from "../../assets/images/bottom-air-desktop.png";
 import tabletBottom from "../../assets/images/bottom-air-tablet.png";
 import mobileBottom from "../../assets/images/bottom-air-mobile.png";
+import BestAudioGear from "../best-audio-gear/BestAudioGear";
 
 export default function Main() {
   const productItems = [
@@ -46,8 +47,10 @@ export default function Main() {
   return (
     <main className="main">
       {productItems.map((prduct, index) => {
-        return <Product key={index} {...prduct} />;
+        return <Product key={index} {...prduct}
+        special={index===1} />;
       })}
+      <BestAudioGear/>
     </main>
   );
 }
