@@ -70,10 +70,13 @@ export default function Main() {
         return <Product key={index} {...prduct}
         special={index===1} />;
       })}
+      <div className="card-center container">
       {productOther.map((prod,ind)=>{
         return <OtherPageReference key={ind} {...prod}/>
       })
       }
+      </div>
+     
       
       <BestAudioGear/>
     </main>
